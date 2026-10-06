@@ -1,5 +1,7 @@
 # CameraUnlock
 
+![LightShaper](tools/assets/lightshaper-wordmark.png)
+
 [Source code on GitHub](https://github.com/L1GHTSHAPER/CameraUnlock) | [Report an issue](https://github.com/L1GHTSHAPER/CameraUnlock/issues) | [Thunderstore](https://thunderstore.io/c/on-together/p/LightShaper/CameraUnlock/)
 
 A BepInEx mod for [On Together](https://store.steampowered.com/app/2688490/On_Together/) that frees the camera for screenshots.

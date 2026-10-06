@@ -1,6 +1,6 @@
 {
   "name": "CameraUnlock",
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "https://github.com/L1GHTSHAPER/CameraUnlock",
   "description": "Camera for screenshots: zoom out to 40 m and tilt to a top-down view, change the field of view, fly a free camera (F6) and hide the interface (F7).",
   "dependencies": [

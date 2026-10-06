@@ -14,7 +14,7 @@ namespace CameraUnlock
     {
         public const string PluginGuid = "ontogether.cameraunlock";
         public const string PluginName = "CameraUnlock";
-        public const string PluginVersion = "1.0.2";
+        public const string PluginVersion = "1.0.3";
 
         const float ToastDuration = 2f;
         const float FreeCamHintDuration = 7f;

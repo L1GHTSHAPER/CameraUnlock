@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3
+
+- Updated the package icon and README with the rounded LightShaper logo and black, white and purple visual style.
+- Refined the camera orbit arrow with a smooth curve and rounded arrowhead.
+- Plugin behavior is unchanged.
+
 ## 1.0.2
 
 - Added the public GitHub repository link to the package website and README.
