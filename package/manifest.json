@@ -1,8 +1,8 @@
 {
   "name": "CameraUnlock",
-  "version_number": "1.0.3",
+  "version_number": "1.1.1",
   "website_url": "https://github.com/L1GHTSHAPER/CameraUnlock",
-  "description": "Camera for screenshots: zoom out to 40 m and tilt to a top-down view, change the field of view, fly a free camera (F6) and hide the interface (F7).",
+  "description": "Camera zoom, tilt, FOV and free flight. Cream tabbed settings via the grouped camera side button. F6 toggles free camera; F7 hides UI. Existing controls and config preserved. English and Russian menus.",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2305"
   ]

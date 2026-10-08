@@ -46,6 +46,7 @@ namespace CameraUnlock
         /// <summary>Prefix of PlayerMovementController.SetCameraRotation.</summary>
         internal static void BeforeRotation(PlayerMovementController controller, Vector2 mouseDelta)
         {
+            if (UiEnvironment.AnyWindowOpen) return;
             Vcam = VcamRef(controller);
             if (!Settings.OrbitEnabled.Value)
                 return;
@@ -62,6 +63,7 @@ namespace CameraUnlock
         /// <summary>Prefix of PlayerMovementController.Zoom: the wheel changes the orbit distance, or the FOV with Shift.</summary>
         internal static void OnZoom(PlayerMovementController controller)
         {
+            if (UiEnvironment.AnyWindowOpen) return;
             float scroll = Input.mouseScrollDelta.y;
             if (Mathf.Abs(scroll) < 0.001f || !GameAccess.GameWouldZoom())
                 return;

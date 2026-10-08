@@ -6,7 +6,15 @@
 
 A BepInEx mod for [On Together](https://store.steampowered.com/app/2688490/On_Together/) that frees the camera for screenshots.
 
+**♥ Enjoying the mod? Leave a like on [Thunderstore](https://thunderstore.io/c/on-together/p/LightShaper/CameraUnlock/) and a ⭐ on [GitHub](https://github.com/L1GHTSHAPER/CameraUnlock) — it helps the project grow!**
+
 The game's camera only zooms between about 2.3 and 4.3 m and tilts about 70°, and the tilt flattens out as you zoom out. This mod turns it into a real orbit around your character, adds field-of-view control, a free fly camera and a key that hides the interface.
+
+## Settings menu
+
+The camera side button opens/closes settings. Tabs: **Orbit**, **Lens**, **Free camera**, **Screenshots**. Free camera → Movement keys collapses. **F6** still toggles free camera, and **F7** still hides the UI; neither key was reassigned to settings.
+
+Cream panels, warm brown text, coral accents, rounded controls and game fonts. Side buttons form one group, show the mod name and the settings hotkey (where available), and move away from visible UI panels. If both edges are blocked, the buttons wait until space becomes available. Existing hotkeys, commands and configuration keys are preserved. Menus scroll on smaller screens; changes save automatically. Where shown, **Apply** saves a field draft. Invalid values keep the saved setting.
 
 ## Features
 
@@ -75,6 +83,12 @@ Hotkeys are ignored while you are typing in the chat or any other text field.
 
 ## Русский
 
+**♥ Нравится мод? Поставьте лайк на [Thunderstore](https://thunderstore.io/c/on-together/p/LightShaper/CameraUnlock/) и ⭐ звезду на [GitHub](https://github.com/L1GHTSHAPER/CameraUnlock) — это помогает проекту расти!**
+
+Меню открывает и закрывает боковая кнопка камеры. Вкладки: **Обзор**, **Объектив**, **Свободная камера**, **Снимки**. Раздел клавиш движения сворачивается. **F6** по-прежнему переключает свободную камеру, **F7** скрывает интерфейс.
+
+Кремовые панели, коричневый текст, коралловые акценты и скруглённые элементы. Боковые кнопки собраны в одну группу; при наведении видны название мода и клавиша настроек, если она есть. Группа избегает видимых игровых панелей; когда места нет, кнопки скрываются до освобождения края. Настройки и прежние клавиши сохранены. Низкие окна прокручиваются, изменения сохраняются автоматически; кнопка «Применить», где она есть, сохраняет введённое значение.
+
 Мод снимает ограничения камеры — для красивых скриншотов.
 
 - **Колесо мыши** — отдаление от 0.4 до 40 м; **правая кнопка мыши** — наклон вплоть до вида строго сверху или снизу.
@@ -82,3 +96,8 @@ Hotkeys are ignored while you are typing in the chat or any other text field.
 - **F6** — свободная камера: W A S D — полёт, E/Q — вверх/вниз, правая кнопка — осмотреться, Shift/Ctrl — быстрее/медленнее, колесо — базовая скорость. Персонаж стоит на месте.
 - **F7** — скрыть/показать интерфейс; скриншот — как обычно, F12 в Steam.
 - Настройки — в `BepInEx/config/ontogether.cameraunlock.cfg` (или в Config editor менеджера модов); там же можно отключить столкновения камеры со стенами.
+
+
+Side settings buttons are opaque squares with rounded corners, a dark brown outline and proportionate icons, sized to match the game's right-hand controls. They hide with the native controls in Desktop mode, including tooltips and pointer hit areas.
+
+Боковые кнопки настроек стали непрозрачными и квадратными: скруглённые углы, коричневая обводка и значки без растягивания. Размер соответствует высоте игровых кнопок справа. В Desktop-режиме они скрываются вместе с игровыми; подсказки и области нажатия также отключаются.

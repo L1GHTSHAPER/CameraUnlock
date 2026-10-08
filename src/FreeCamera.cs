@@ -102,7 +102,7 @@ namespace CameraUnlock
             _brain.enabled = false;
 
             float deltaTime = Time.unscaledDeltaTime;
-            if (!GameAccess.IsAnyTextFieldFocused())
+            if (!UiEnvironment.AnyWindowOpen && !GameAccess.IsAnyTextFieldFocused())
                 ReadInput(deltaTime);
 
             float smoothing = Settings.FreeCamSmoothing.Value;

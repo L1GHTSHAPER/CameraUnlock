@@ -14,7 +14,7 @@ namespace CameraUnlock
     {
         public const string PluginGuid = "ontogether.cameraunlock";
         public const string PluginName = "CameraUnlock";
-        public const string PluginVersion = "1.0.3";
+        public const string PluginVersion = "1.1.1";
 
         const float ToastDuration = 2f;
         const float FreeCamHintDuration = 7f;
@@ -66,6 +66,7 @@ namespace CameraUnlock
         static float _toastUntil;
         float _hintUntil;
         GUIStyle _hintStyle;
+        UiSkin _toastSkin;
         static string _lastError;
 
         void Awake()
@@ -73,8 +74,10 @@ namespace CameraUnlock
             Instance = this;
             Log = Logger;
             BindConfig();
+            ConfigMenu.Create(gameObject, PluginName, "camera", Config, () => GameAccess.LocalPlayer != null && !_uiHider.IsHidden);
 
             _harmony = new Harmony(PluginGuid);
+            UiEnvironment.InstallInputGuard(_harmony);
             TryPatch(typeof(SetCameraRotationPatch), "camera tilt");
             TryPatch(typeof(ZoomPatch), "camera zoom");
             TryPatch(typeof(InputManagerUpdatePatch), "input blocking for the free camera");
@@ -167,7 +170,7 @@ namespace CameraUnlock
 
         void Update()
         {
-            if (GameAccess.IsAnyTextFieldFocused())
+            if (UiEnvironment.AnyWindowOpen || GameAccess.IsAnyTextFieldFocused())
                 return;
 
             ReadShortcuts(FreeCamToggleKey.Value, HideUiKey.Value, out bool freeCam, out bool hideUi);
@@ -294,6 +297,7 @@ namespace CameraUnlock
 
         void OnGUI()
         {
+            if (UiEnvironment.PreviewRendering) return;
             if (!ShowHints.Value || _uiHider.IsHidden)
                 return;
             float now = Time.unscaledTime;
@@ -303,13 +307,14 @@ namespace CameraUnlock
 
             if (_hintStyle == null)
             {
-                _hintStyle = new GUIStyle(GUI.skin.box)
+                _toastSkin = new UiSkin();
+                _hintStyle = new GUIStyle(_toastSkin.Panel)
                 {
                     alignment = TextAnchor.MiddleCenter,
                     wordWrap = true,
                     richText = false
                 };
-                _hintStyle.normal.textColor = Color.white;
+                _hintStyle.normal.textColor = UiSkin.TextColor;
             }
             float scale = Mathf.Max(1f, Screen.height / 1080f);
             _hintStyle.fontSize = Mathf.RoundToInt(16 * scale);
@@ -323,6 +328,7 @@ namespace CameraUnlock
 
         void OnDestroy()
         {
+            _toastSkin?.Destroy();
             try
             {
                 _freeCamera.Exit();
