@@ -1,6 +1,6 @@
 {
   "name": "CameraUnlock",
-  "version_number": "1.1.1",
+  "version_number": "1.1.2",
   "website_url": "https://github.com/L1GHTSHAPER/CameraUnlock",
   "description": "Camera zoom, tilt, FOV and free flight. Cream tabbed settings via the grouped camera side button. F6 toggles free camera; F7 hides UI. Existing controls and config preserved. English and Russian menus.",
   "dependencies": [
